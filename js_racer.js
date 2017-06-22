@@ -1,6 +1,7 @@
 "use strict"
 
 import Dice from "./dice.js"
+// var term = require('terminal-kit').terminal;
 
 class JSRacer {
   constructor(players, length) {
