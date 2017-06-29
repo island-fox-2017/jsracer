@@ -19,22 +19,10 @@ class JSRacer {
 
   print_line(player, pos) {
     let board = [];
-    // for (var i = 0; i < this.length; i++) {
-    //   if (i == pos) board.push(`${player}|`);
-    //   else board.push(' |')
-    // }
     for (var i = 0; i < this.length; i++) {
-      if (i == pos && i == 0) board.push(`|${player}`);
-      else if (i == 0) board.push('| ');
-      else if (i == pos && i == this.length - 1) board.push(`${player}|`);
-      else if (i == this.length - 1) board.push(' |');
-      else if (i == pos) board.push(`${player} `);
-      else if (i != 0 && i < pos) board.push('■ ');
-      else board.push('  ');
+      if (i == pos) board.push(`${player}|`);
+      else board.push(' |')
     }
-
-    // &#9773; commie
-    // &#10004; tick
     return board.join('');
   }
 
@@ -69,4 +57,4 @@ class JSRacer {
 
 
 
-export default JSRacer;
+export default JSRacer
