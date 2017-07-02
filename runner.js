@@ -11,4 +11,10 @@ function sleep(milliseconds) {
   }
 }
 
-// Your code here...
+let balapan = new JSRacer(7,25);
+
+while (balapan.finished() !== true) {
+  sleep(200);
+  balapan.reset_board();
+  balapan.print_board();
+}
