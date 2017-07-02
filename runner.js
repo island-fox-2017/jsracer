@@ -12,3 +12,18 @@ function sleep(milliseconds) {
 }
 
 // Your code here...
+
+let racer = new JSRacer(4, 40);
+
+sleep(1000);
+racer.reset_board();
+racer.print_start();
+
+
+while(!racer.finished())
+{
+    sleep(1000);
+    racer.reset_board();
+    racer.print_board();
+}
+console.log(`the winner is ${racer.winner()}`);
