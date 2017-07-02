@@ -1,0 +1,19 @@
+{
+  "name": "jsracer",
+  "version": "0.0.1",
+  "description": "js-racer",
+  "main": "runner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/island-fox-2017/jsracer.git"
+  },
+  "author": "gani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/island-fox-2017/jsracer/issues"
+  },
+  "homepage": "https://github.com/island-fox-2017/jsracer#readme"
+}
