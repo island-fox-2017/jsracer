@@ -12,3 +12,27 @@ function sleep(milliseconds) {
 }
 
 // Your code here...
+
+//Players object
+// let players = [
+//   { name: 'a', position: 0 },
+//   { name: 'b', position: 0 },
+//   { name: 'c', position: 0 }
+// ];
+
+let newRace = new JSRacer(players, 30);
+
+newRace.reset_board();
+newRace.print_start();
+
+while (!newRace.finished()) {
+  sleep(1000);
+  newRace.reset_board();
+  newRace.print_board();
+}
+
+
+
+
+
+//ini buat njalanin kodenya
