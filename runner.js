@@ -15,7 +15,7 @@ function sleep(milliseconds) {
 let play = new JSRacer(5, 30);
 play.reset_board();
 // play.print_awal();
-sleep(400);
+sleep(10000);
 
 while(play.finished() === false) {
   sleep(400);

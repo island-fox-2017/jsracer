@@ -26,13 +26,20 @@ class JSRacer {
   }
 
   print_board() {
+    let jebakan = this.dice.roll()
     if (this.count === this.totalPlayer) {
       this.count = 0;
     }
 
     this.advanced_player(this.arrayPlayer[this.count]);
     for (let i = 0; i < this.totalPlayer; i++) {
-      this.print_line(this.arrayPlayer[i].nama, this.arrayPlayer[i].posisi);
+      
+      if (this.arrayPlayer[i].posisi===7){
+        console.log(`Player ${this.arrayPlayer[i].nama} kena jebakan` );
+        this.print_line(this.arrayPlayer[i].nama, jebakan);
+      }else{
+        this.print_line(this.arrayPlayer[i].nama, this.arrayPlayer[i].posisi);
+      }
     }
 
     this.count++;
@@ -44,7 +51,7 @@ class JSRacer {
       if (pos === i) {
         row.push(player);
       } else {
-        row.push(" ");
+        row.push(" ")
       }
     }
 
@@ -69,6 +76,7 @@ class JSRacer {
     }
     return false;
   }
+  
 
   winner(win) {
     console.log(`\n And the winner is: ${win}\n`);
@@ -82,6 +90,6 @@ class JSRacer {
 
 let racer = new JSRacer(5,20)
 
-console.log(racer.print_line('a',5));
+// console.log(racer.print_line('a',5));
 
 export default JSRacer
