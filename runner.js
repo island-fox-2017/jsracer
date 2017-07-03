@@ -23,16 +23,25 @@ let players = [
   {name: 'G', position: 0},
 ];
 
-let race = new JSRacer(players, 50);
+let race = new JSRacer(players, 40);
+race.reset_board();
+race.print_board();
+sleep(1000);
+race.reset_board();
+race.trap();
+race.print_board();
+sleep(1000);
 
 while(!race.finished()) {
   sleep(500);
   race.reset_board();
   race.print_board();
   race.advanced_player();
-  console.log(`The winner is: ${race.winner()}`);
+  console.log(race.players);
+  console.log(race.winner());
 }
 
 race.reset_board();
 race.print_board();
-console.log(`The winner is: ${race.winner()}`);
+console.log(race.players);
+console.log(race.winner());
